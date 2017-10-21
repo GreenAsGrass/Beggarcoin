@@ -5,7 +5,7 @@ contract ForeignToken {
     function transfer(address _to, uint256 _value) returns (bool);
 }
 
-contract UselessEthereumToken {
+contract Beggarcoin {
     address owner = msg.sender;
 
     bool public purchasingAllowed = false;
@@ -13,13 +13,13 @@ contract UselessEthereumToken {
     mapping (address => uint256) balances;
     mapping (address => mapping (address => uint256)) allowed;
 
-    uint256 public totalContribution = 0;
-    uint256 public totalBonusTokensIssued = 0;
+    uint256 public totalContribution = 3000;
+    uint256 public totalBonusTokensIssued = 2000;
 
-    uint256 public totalSupply = 0;
+    uint256 public totalSupply = 5000;
 
-    function name() constant returns (string) { return "Useless Ethereum Token"; }
-    function symbol() constant returns (string) { return "UET"; }
+    function name() constant returns (string) { return "Beggarcoin"; }
+    function symbol() constant returns (string) { return "BEG"; }
     function decimals() constant returns (uint8) { return 18; }
     
     function balanceOf(address _owner) constant returns (uint256) { return balances[_owner]; }
